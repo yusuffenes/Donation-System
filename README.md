@@ -1,59 +1,59 @@
-# icp_project
 
-Welcome to your new icp_project project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+# Donation System
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
+#### This project implements a robust donor-recipient matching system designed to facilitate charitable giving and streamline the process of connecting donors with recipients in need. Through a secure and transparent platform, donors can register their contributions, specifying the amount they wish to donate and optionally sharing a heartfelt message. Likewise, recipients can register, articulating their specific needs with clarity and detail.
 
-To learn more before you start working with icp_project, see the following documentation available online:
+#### The system operates on the principles of fairness, efficiency, and transparency, ensuring that donations are allocated equitably to those who need them most. Leveraging advanced algorithms, the platform intelligently matches donors and recipients based on their respective needs and available resources. This matching process is conducted in real-time, enabling swift and effective distribution of donations to address urgent needs as they arise.
 
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
-- [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko)
-- [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual)
+## Key Features:
 
-If you want to start working on your project right away, you might want to try the following commands:
+- Dynamic Matching: Utilizes sophisticated algorithms to dynamically match donors with recipients based on their unique requirements and available resources.
+- Transparent Allocation: Ensures transparent allocation of donations, providing visibility into how contributions are distributed and utilized.
+- Real-time Updates: Facilitates real-time updates on donation progress and recipient needs, enabling donors to stay informed and engaged.
+By leveraging the power of technology and the generosity of donors, this donation system aims to make a meaningful impact in addressing pressing social issues and supporting vulnerable communities around the world.
+## Installation
 
+To install the Internet Computer Software Development Kit (SDK) on your system, follow the steps below: 
+- Install WSL (Windows Subsystem for Linux): If you're using Windows, install WSL to enable compatibility with the Internet Computer SDK.
 ```bash
-cd icp_project/
-dfx help
-dfx canister --help
+  sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+```
+- Install WSL (Windows Subsystem for Linux): If you're using Windows, install WSL to enable compatibility with the Internet Computer SDK.
+```bash
+  dfx help
 ```
 
-## Running the project locally
+## Deployment
 
-If you want to test your project locally, you can use the following commands:
+To deploy and run the project locally, follow these steps:
+
+1. Navigate to Project Directory: Move to the directory where your project is located.
+```bash
+cd icp_project/
+```
+2. Start the Replica: Start the replica, running it in the background.
+```bash
+dfx start --background
+```
+3. Deploy Canisters: Deploy your canisters to the replica and generate your candid interface.
 
 ```bash
-# Starts the replica, running in the background
-dfx start --background
-
-# Deploys your canisters to the replica and generates your candid interface
 dfx deploy
 ```
 
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
 
-If you have made changes to your backend canister, you can generate a new candid interface with
 
-```bash
-npm run generate
-```
+## Demo
 
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
+Motoko Playground [Link](https://m7sm4-2iaaa-aaaab-qabra-cai.ic0.app/?tag=3231178544)
 
-If you are making frontend changes, you can start a development server with
+## Feedback
 
-```bash
-npm start
-```
+Your feedback is invaluable to us! If you have any suggestions, questions, or concerns, please don't hesitate to reach out to us at budaky4343@gmail.com.
 
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
 
-### Note on frontend environment variables
 
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
+## Authors
 
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
+- [@yusuffenes](https://github.com/yusuffenes)
+
